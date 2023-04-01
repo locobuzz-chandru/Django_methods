@@ -5,30 +5,29 @@
     <title>Title</title>
     <style>
         table,th,tr,td{border:1px solid black}
-
-
     </style>
 </head>
 <body>
 <table>
-    <h3>Student information</h3>
+    <h3>information</h3>
     <th>ID</th>
     <th>Name</th>
     <th>Roll</th>
     <th>City</th>
     <th>Marks</th>
-    <th>Passing Year</th>
+    <th>Pass Date</th>
+    <th>Admission date time</th>
     <tr>
-        <!--    {% for student in students %}-->
-
         <td>{{student.id}}</td>
         <td>{{student.name}}</td>
         <td>{{student.roll}}</td>
         <td>{{student.city}}</td>
         <td>{{student.marks}}</td>
-        <td>{{student.pass_date}}</td>
-        <!--        {% endfor %}-->
+        <td>{{student.passdate}}</td>
+        <td>{{student.admdatetime}}</td>
     </tr>
 </table>
 </body>
 </html>
+<!--    {% for student in students %}-->
+<!--        {% endfor %}-->
