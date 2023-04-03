@@ -1,8 +1,16 @@
 from django.shortcuts import render
+from django.views.decorators.clickjacking import xframe_options_exempt, xframe_options_deny, xframe_options_sameorigin
 from .models import Author, Publisher, Book, Store, Item
 from django.db.models import Avg, Min, Max, Count, Sum, FloatField, F, Q
 
 
+@xframe_options_sameorigin
+def same_origin(request):
+    return render(request, 'school/click.html')
+
+
+# @xframe_options_deny
+@xframe_options_exempt
 def home(request):
     # b = Book.objects.count()
     # print(b)

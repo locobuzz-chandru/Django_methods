@@ -21,4 +21,5 @@ from book_app import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home),
+    path('same/', views.same_origin)
 ]
