@@ -4,13 +4,6 @@ from .models import Author, Publisher, Book, Store, Item
 from django.db.models import Avg, Min, Max, Count, Sum, FloatField, F, Q
 
 
-@xframe_options_sameorigin
-def same_origin(request):
-    return render(request, 'school/click.html')
-
-
-# @xframe_options_deny
-@xframe_options_exempt
 def home(request):
     # b = Book.objects.count()
     # print(b)
@@ -131,9 +124,9 @@ def home(request):
 
     # If the values() clause precedes the annotate() clause, any annotations will be automatically added to the result
     # set.
-    # if the values() clause is applied after the annotate() clause, you need to explicitly include the aggregate column
+    # if the values() clause is applied after to annotate() clause, you need to explicitly include the aggregate column
     # a = Author.objects.annotate(average_rating=Avg('book__rating')).values('name', 'average_rating')
-    # print(a)  # values() clause only constrains the fields that are generated on output
+    # print(a)  # values() clause only contains the fields that are generated on output
 
     # items = Item.objects.order_by('name')
     # a = items.values('name').annotate(Count('name'), Max('data'))
